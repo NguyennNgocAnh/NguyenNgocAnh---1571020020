@@ -1,0 +1,43 @@
+﻿@model Website.Model.Entities.Event
+
+@{
+    ViewData["Title"] = "Thêm mới sự kiện";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<div class="main-panel">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="card-title mb-0">Thêm mới sự kiện</h5>
+                    <a href="/Administrator/Event/Index" class="btn btn-light" title="Quay lại">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <form asp-action="Create" asp-controller="Event" method="post" class="row-col-md-6">
+                    <div class="col-12">
+                        <label asp-for="EventId" class="form-label">STT</label>
+                        <input asp-for="EventId" class="form-control" />
+                    </div>
+                    <div class="col-12">
+                        <label asp-for="EventName" class="form-label">Tên sự kiện</label>
+                        <input asp-for="EventName" class="form-control" />
+                    </div>
+                    <div class="col-12">
+                        <label asp-for="Description" class="form-label">Mô tả</label>
+                        <input asp-for="Description" class="form-control" />
+                    </div>
+                    
+                    <div class="col-12 text-center mt-2">
+                        <button type="submit" class="btn btn-primary">Thêm mới</button>
+                        <button type="reset" class="btn btn-secondary">Hủy</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

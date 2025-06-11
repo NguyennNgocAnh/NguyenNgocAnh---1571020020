@@ -1,0 +1,149 @@
+﻿@{
+    ViewBag.Title = "Dự báo giá";
+    var inputValues = ViewBag.InputValues as string ?? "";
+    var prediction = ViewBag.Prediction != null ? ViewBag.Prediction.ToString() : "";
+}
+<link rel="stylesheet" href="~/css/forecast.css" asp-append-version="true" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="forecast-wrapper">
+    <div class="forecast-header">
+        <h1><i class="fa-solid fa-chart-line"></i> NeWeb - Dự báo giá cổ phiếu</h1>
+        <p class="subtitle">Công cụ dự đoán giá cổ phiếu dựa trên dữ liệu bạn cung cấp</p>
+    </div>
+
+    @if (ViewBag.StockList != null)
+    {
+        <form asp-action="AutoPredict" method="get" class="stock-form">
+            <label>Chọn mã cổ phiếu:</label>
+            <select name="stockId">
+                @foreach (var stock in ViewBag.StockList)
+                {
+                    <option value="@stock.StockId">@stock.StockName</option>
+                }
+            </select>
+            <button type="submit">Dự báo tự động</button>
+        </form>
+    }
+    else
+    {
+        <p class="error-msg">Không có danh sách cổ phiếu để chọn.</p>
+    }
+
+    @if (ViewBag.Prediction != null)
+    {
+        <div class="result-block">
+            <div class="result-number">
+                <h3>
+                    Kết quả dự báo giá cho
+                    <strong class="stock-name">@ViewBag.SelectedStockName</strong>
+                </h3>
+                <p><strong>@ViewBag.Prediction</strong></p>
+            </div>
+            <div class="result-text">
+                @{
+                    var lastValue = 0.0f;
+                    var isIncrease = false;
+                    try
+                    {
+                        var vals = inputValues.Split(',')
+                        .Select(x => float.Parse(x.Trim(), System.Globalization.CultureInfo.InvariantCulture))
+                        .ToArray();
+                        if (vals.Length > 0)
+                        {
+                            lastValue = vals[^1];
+                            isIncrease = float.Parse(prediction, System.Globalization.CultureInfo.InvariantCulture) > lastValue;
+                        }
+                    }
+                    catch { }
+                }
+                <p>Các giá gần nhất: <span class="price-values">@inputValues</span></p>
+                <p>
+                    Giá dự kiến sẽ <strong class="@(isIncrease ? "text-increase" : "text-decrease")">
+                        @(isIncrease ? "tăng" : "giảm")
+                    </strong> so với mức hiện tại (<b>@lastValue</b>).
+                    <a href="https://example.com/du-bao-gia" target="_blank">Chi tiết</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="chart-box">
+            <h3>Biểu đồ dự báo</h3>
+            <canvas id="forecastChart"></canvas>
+        </div>
+    }
+
+    <div class="info-section">
+        <h3>NeWeb là gì?</h3>
+        <img src="~/img/slide/slide21.png" alt="Dự báo giá">
+        <p>
+            NeWeb - Dự báo giá là phương pháp phân tích xu hướng giá trong tương lai dựa trên các mô hình thống kê.
+            Công cụ này giúp nhà đầu tư đưa ra quyết định hợp lý hơn khi giao dịch.
+            <a href="https://example.com/du-bao-ky-thuat" target="_blank">Tìm hiểu thêm</a>
+        </p>
+    </div>
+</div>
+
+@if (ViewBag.Prediction != null)
+{
+    <script>
+        const inputData = "@inputValues".split(',').map(x => parseFloat(x.trim())).filter(x => !isNaN(x));
+        const prediction = parseFloat("@prediction");
+
+        if (!isNaN(prediction) && inputData.length > 0) {
+            const labels = inputData.map((_, i) => i + 1);
+            labels.push(labels.length + 1);
+            const data = [...inputData, prediction];
+
+            const ctx = document.getElementById('forecastChart').getContext('2d');
+            const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+            gradient.addColorStop(0, 'rgba(54, 162, 235, 0.4)');
+            gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Giá & Dự báo',
+                        data: data,
+                        borderColor: '#1f77b4',
+                        backgroundColor: gradient,
+                        pointBackgroundColor: labels.map((_, i) => i === labels.length - 1 ? '#e74c3c' : '#1f77b4'),
+                        pointRadius: labels.map((_, i) => i === labels.length - 1 ? 6 : 4),
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Biểu đồ dự báo giá',
+                            font: { size: 18, weight: 'bold' },
+                            color: '#08306b'
+                        },
+                        legend: {
+                            labels: { color: '#333' }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Thời điểm'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Giá trị'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+}

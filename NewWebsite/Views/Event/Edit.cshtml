@@ -1,0 +1,27 @@
+﻿@model Website.Model.Entities.Event
+@{
+    ViewData["Title"] = "Chỉnh sửa sự kiện";
+}
+<head>
+    <link rel="stylesheet" href="~/css/eventedit.css" asp-append-version="true" />
+</head>
+
+<h2 class="event-edit-title">Chỉnh sửa sự kiện</h2>
+
+<form asp-action="Edit" method="post" class="event-edit-form">
+    <input type="hidden" asp-for="EventId" />
+    <div class="form-group">
+        <label class="form-label">Tên sự kiện</label>
+        <input asp-for="EventName" class="form-input" />
+        <span asp-validation-for="EventName" class="form-error-message"></span>
+    </div>
+    <div class="form-group">
+        <label class="form-label">Mô tả</label>
+        <textarea asp-for="Description" class="form-input"></textarea>
+        <span asp-validation-for="Description" class="form-error-message"></span>
+    </div>
+    <div class="form-actions">
+        <button type="submit" class="btn-submit">Cập nhật</button>
+        <a asp-action="Index" class="btn-cancel">Quay lại</a>
+    </div>
+</form>

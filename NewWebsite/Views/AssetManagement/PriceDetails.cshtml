@@ -1,0 +1,33 @@
+﻿@model List<Website.Model.Entities.MarketPrice>
+
+<div class="table-container">
+    <h2 class="text-center mb-3">Bảng giá thị trường</h2>
+
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Tên Chứng Khoán</th>
+                <th>Ngày</th>
+                <th>Giá Mở Cửa</th>
+                <th>Giá Trần</th>
+                <th>Giá Sàn</th>
+                <th>Giá Đóng Cửa</th>
+                <th>Khớp Lệnh</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.StockId</td>
+                    <td>@(item.PriceDate?.ToString("dd/MM/yyyy") ?? "Không có")</td>
+                    <td>@item.OpenPrice</td>
+                    <td>@item.CeilingPrice</td>
+                    <td>@item.FloorPrice</td>
+                    <td>@item.LowPrice</td>
+                    <td>@item.MatchedVolume</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

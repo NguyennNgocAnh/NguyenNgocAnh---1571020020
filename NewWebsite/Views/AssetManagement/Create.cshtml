@@ -1,0 +1,59 @@
+﻿@model Website.Model.Entities.AssetManagement
+@{
+    ViewData["Title"] = "Thêm mới tài sản";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/asset.css" />
+</head>
+<div class="container mt-4">
+
+    <!-- Form -->
+    <div class="d-flex justify-content-center mt-4">
+        <div class="col-md-10 col-lg-8">
+            <div class="card custom-form-card border-0 shadow rounded-4">
+                <div class="card-header">Thêm mới tài sản</div>
+            </div>
+            <div class="card-body p-4 bg-white rounded-bottom-4">
+                <form action="/AssetManagement/Create" method="post" class="row g-3">
+                    <div class="col-md-6">
+                        <label asp-for="AssetCode" class="form-label fw-semibold">Mã tài sản</label>
+                        <input asp-for="AssetCode" class="form-control" readonly />
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="AssetName" class="form-label fw-semibold">Tên tài sản</label>
+                        <input asp-for="AssetName" class="form-control" />
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="Action" class="form-label fw-semibold">Hành động</label>
+                        <select asp-for="Action" class="form-select">
+                            <option value="">-- Chọn hành động --</option>
+                            <option value="Mua">Mua</option>
+                            <option value="Bán">Bán</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="Quantity" class="form-label fw-semibold">Số lượng</label>
+                        <input asp-for="Quantity" class="form-control" />
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="BuyPrice" class="form-label fw-semibold">Giá mua</label>
+                        <input asp-for="BuyPrice" class="form-control" />
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="SellPrice" class="form-label fw-semibold">Giá bán</label>
+                        <input asp-for="SellPrice" class="form-control" />
+                    </div>
+                    <div class="col-12">
+                        <label asp-for="ActionDate" class="form-label fw-semibold">Ngày thực hiện</label>
+                        <input asp-for="ActionDate" class="form-control" type="date" />
+                    </div>
+                    <div class="col-12 text-center mt-3">
+                        <button type="submit" class="btn btn-primary px-4">Thêm mới</button>
+                        <button type="reset" class="btn btn-outline-secondary ms-2 px-4" onclick="window.history.back();">Hủy</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

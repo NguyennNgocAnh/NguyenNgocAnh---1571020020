@@ -1,0 +1,244 @@
+﻿@model Tuple<List<Website.Model.Entities.Category>, List<Website.Model.Entities.News>>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+</head>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 position-relative">
+            <div id="customCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner rounded shadow">
+                    <div class="carousel-item active">
+                        <img src="/img/slide/slide7.jpg" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/slide/slide8.jpg" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/slide/slide3.jpg" class="d-block w-100" alt="Slide 3">
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev small-btn" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next small-btn" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-header text-white">
+                    <strong>Danh mục tin tức</strong>
+                </div>
+                <ul class="list-group list-group-flush">
+                    @foreach (var category in Model.Item1)
+                    {
+                        <li class="list-group-item">
+                            <a href="#">@category.CategoryName</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Danh sách tin tức -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="stock-category">
+                @{
+                    var groupedNews = Model.Item2
+                    .GroupBy(n => n.Category.CategoryName)
+                    .Where(g => g.Key == "Chứng khoán")
+                    .ToList();
+                }
+
+                @foreach (var group in groupedNews)
+                {
+                    <h2 class="section-title">@group.Key</h2>
+
+                    <div class="news-container">
+                        @{
+                            var newsList = group.ToList();
+                            var mainNews = newsList.FirstOrDefault();
+                            var smallNews = newsList.Skip(1).Take(2).ToList();
+                        }
+
+                        @if (mainNews != null)
+                        {
+                            <div class="news-wrapper d-flex gap-3 mb-4">
+                                <div class="main-news flex-grow-1">
+                                    <img src="~/img/news/@mainNews.Image1" alt="Main News Image" class="img-fluid rounded">
+                                    <div class="main-details mt-2">
+                                        <h3 class="main-title h5 mb-1">
+                                            <a asp-controller="News" asp-action="Detail" asp-route-id="@mainNews.NewsId">
+                                                @mainNews.Title
+                                            </a>
+                                        </h3>
+                                        <small class="text-muted">
+                                            @(mainNews.PublishDate?.ToString("dd/MM/yyyy"))
+                                        </small>
+                                    </div>
+                                </div>
+
+                                <!-- 2 ảnh nhỏ bên phải -->
+                                <div class="small-news d-flex flex-column gap-2" style="width: 70%;">
+                                    @foreach (var small in smallNews)
+                                    {
+                                        <div class="small-item d-flex mb-6">
+                                            <img src="~/img/news/@small.Image1" alt="News Image" class="img-fluid rounded fixed-size-img" style="width: 150px; height: 100px; object-fit: cover;">
+                                            <div class="small-details ps-2">
+                                                <h4 class="small-title h6 mb-1">
+                                                    <a asp-controller="News" asp-action="Detail" asp-route-id="@small.NewsId">
+                                                        @small.Title
+                                                    </a>
+                                                </h4>
+                                                <small class="text-muted date-text">
+                                                    @(small.PublishDate?.ToString("dd/MM/yyyy"))
+                                                </small>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+
+                @{
+                    var realEstateNews = Model.Item2
+                    .Where(n => n.Category.CategoryName == "Bất động sản")
+                    .ToList();
+                }
+
+                @if (realEstateNews.Any())
+                {
+                    <h2 class="section-title">Bất động sản</h2>
+                    <div class="bds-news d-flex flex-column gap-2">
+                        @foreach (var item in realEstateNews)
+                        {
+                            <div class="bds-item d-flex mb-4">
+                                <img src="~/img/news/@item.Image1" alt="Real Estate News" class="img-fluid rounded fixed-size-img" style="width: 250px; height: 230px; object-fit: cover;">
+                                <div class="bds-details ps-3 d-flex flex-column justify-content-between">
+                                    <div>
+                                        <h4 class="bds-title h6 mb-1">
+                                            <a asp-controller="News" asp-action="Detail" asp-route-id="@item.NewsId">
+                                                @item.Title
+                                            </a>
+                                        </h4>
+                                        <small class="text-muted date-text">
+                                            @(item.PublishDate?.ToString("dd/MM/yyyy"))
+                                        </small>
+                                        <p>
+                                            @string.Join(" ", item.Content?.Split(' ').Take(60))...
+                                        </p>
+                                    </div>
+                                    <div class="mt-2">
+                                        <a class="btn" style="background-color: #08306b; color: white;" asp-controller="News" asp-action="Detail" asp-route-id="@item.NewsId">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+                @{
+                    var doanhNghiepNews = Model.Item2
+                    .Where(n => n.Category.CategoryName == "Doanh nghiệp")
+                    .Take(3)
+                    .ToList();
+                }
+
+                @if (doanhNghiepNews.Any())
+                {
+                    <h2 class="section-title">Doanh nghiệp</h2>
+                    <div class="container-fluid py-3">
+                        <div class="dn-wrapper d-flex gap-3 mx-auto" style="max-width: 1300px; margin-left: 20px;">
+                            @foreach (var item in doanhNghiepNews)
+                            {
+                                <div class="dn-news" style="flex: 1;">
+                                    <img src="~/img/news/@item.Image1" alt="Doanh Nghiệp News" class="img-fluid rounded w-100" style="height: 200px; object-fit: cover;">
+                                    <div class="dn-details mt-2">
+                                        <h3 class="dn-title h5 mb-1">
+                                            <a asp-controller="News" asp-action="Detail" asp-route-id="@item.NewsId">
+                                                @item.Title
+                                            </a>
+                                        </h3>
+                                        <small class="text-muted">
+                                            @(item.PublishDate?.ToString("dd/MM/yyyy"))
+                                        </small>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-4">
+                <img src="~/img/slide/slide2.jpg" alt="" class="img-fluid rounded">
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-header text-white">
+                    <strong>Tin tức nổi bật</strong>
+                </div>
+                <ul class="list-group list-group-flush">
+                    @foreach (var news in Model.Item2.Take(3))
+                    {
+                        <li class="list-group-item">
+                            <a asp-controller="News" asp-action="Detail" asp-route-id="@news.NewsId">@news.Title</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="category-section">
+            <h2 class="section-title">Danh Mục</h2>
+            <div class="category-wrapper">
+                <div class="category-item">
+                    <a asp-controller="News" asp-action="Categories" asp-route-id="5">
+                        <img src="~/img/slide/slide1.jpg" alt="Vĩ mô" class="img-fluid rounded">
+                        <div class="overlay">
+                            <span class="category-text">Vĩ mô</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="category-item">
+                    <a asp-controller="News" asp-action="Categories" asp-route-id="4">
+                        <img src="~/img/slide/slide9.jpg" alt="Tài chính" class="img-fluid rounded">
+                        <div class="overlay">
+                            <span class="category-text">Tài chính</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="category-item">
+                    <a asp-controller="News" asp-action="Categories" asp-route-id="6">
+                        <img src="~/img/slide/slide10.jpg" alt="Ngân hàng" class="img-fluid rounded">
+                        <div class="overlay">
+                            <span class="category-text">Ngân hàng</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="category-item">
+                    <a asp-controller="News" asp-action="Categories" asp-route-id="1">
+                        <img src="~/img/slide/slide11.jpg" alt="Chứng khoán" class="img-fluid rounded">
+                        <div class="overlay">
+                            <span class="category-text">Chứng khoán</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

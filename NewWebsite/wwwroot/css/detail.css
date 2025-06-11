@@ -1,0 +1,115 @@
+﻿body {
+    font-family: "Segoe UI", Roboto, sans-serif;
+    background-color: #f5f8fc;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.news-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a73e8;
+    margin-bottom: 10px;
+}
+
+.news-meta {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.news-content {
+    line-height: 1.8;
+    font-size: 17px;
+    color: #333;
+}
+
+.news-part {
+    margin-bottom: 30px;
+}
+
+    .news-part img {
+        display: block;
+        max-width: 100%;
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+.comment-section {
+    margin-top: 50px;
+    border-top: 2px solid #ddd;
+    padding-top: 30px;
+}
+
+    .comment-section h4 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        color: #1a73e8;
+    }
+
+.comment-card {
+    background-color: #f0f4ff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+    .comment-card p {
+        margin: 0;
+        font-size: 15px;
+    }
+
+.comment-date {
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.comment-form {
+    margin-top: 30px;
+}
+
+    .comment-form .form-group {
+        margin-bottom: 15px;
+    }
+
+    .comment-form label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+        color: #333;
+    }
+
+    .comment-form textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        resize: vertical;
+    }
+
+    .comment-form button {
+        background-color: #1a73e8;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .comment-form button:hover {
+            background-color: #0f5fd4;
+        }

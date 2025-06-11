@@ -1,0 +1,30 @@
+﻿@model List<Website.Model.Entities.AssetManagement>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-info">Không có giao dịch nào trong khoảng thời gian này.</div>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Mã tài sản</th>
+                <th>Hành động</th>
+                <th>Số lượng</th>
+                <th>Ngày</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.AssetCode</td>
+                    <td>@item.Action</td>
+                    <td>@item.Quantity</td>
+                    <td>@(item.ActionDate?.ToString("dd/MM/yyyy") ?? "")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

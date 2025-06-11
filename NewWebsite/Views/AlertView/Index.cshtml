@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Website.Model.Entities.Alert>
+
+@{
+    ViewData["Title"] = "Danh sách cảnh báo";
+}
+<link rel="stylesheet" href="~/css/alert.css" asp-append-version="true" />
+
+<h2>Danh sách cảnh báo</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-alert">Tạo cảnh báo mới</a>
+</p>
+
+<table class="table table-index">
+    <thead>
+        <tr>
+            <th>Tên cảnh báo</th>
+            <th>Cổ phiếu</th>
+            <th>Ngưỡng giá trên</th>
+            <th>Ngưỡng giá dưới</th>
+            <th>Ngày kích hoạt</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var alert in Model)
+        {
+            <tr>
+                <td>@alert.AlertName</td>
+                <td>@alert.Stock?.StockName</td>
+                <td>@alert.PriceThresholdUp?.ToString("N2")</td>
+                <td>@alert.PriceThresholdDown?.ToString("N2")</td>
+                <td>@alert.TriggeredTime?.ToString("dd/MM/yyyy HH:mm:ss")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@alert.AlertId" class="btn btn-sm btn-primary">Sửa</a>
+                    <a asp-action="Delete" asp-route-id="@alert.AlertId" class="btn btn-sm btn-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

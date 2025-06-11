@@ -1,0 +1,53 @@
+﻿@model Website.Model.Entities.Alert
+
+@{
+    ViewData["Title"] = "Đặt Cảnh Báo";
+}
+<link rel="stylesheet" href="~/css/alert.css" asp-append-version="true" />
+
+<h2>Đặt Cảnh Báo</h2>
+
+<form asp-action="Create" asp-controller="AlertView" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="AlertName" class="control-label">Tên cảnh báo</label>
+        <input asp-for="AlertName" class="form-control" />
+        <span asp-validation-for="AlertName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="StockId" class="control-label">Cổ phiếu</label>
+        <select asp-for="StockId" class="form-control" asp-items="@(new SelectList(ViewBag.StockList, "StockId", "StockName"))">
+            <option value="">-- Chọn cổ phiếu --</option>
+        </select>
+        <span asp-validation-for="StockId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PriceThresholdUp" class="control-label">Ngưỡng giá trên</label>
+        <input asp-for="PriceThresholdUp" class="form-control" type="number" step="0.01" />
+        <span asp-validation-for="PriceThresholdUp" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PriceThresholdDown" class="control-label">Ngưỡng giá dưới</label>
+        <input asp-for="PriceThresholdDown" class="form-control" type="number" step="0.01" />
+        <span asp-validation-for="PriceThresholdDown" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TriggeredTime" class="control-label">Ngày Cảnh Báo</label>
+        <input asp-for="TriggeredTime" class="form-control" type="date" />
+        <span asp-validation-for="TriggeredTime" class="text-danger"></span>
+    </div>
+    <input type="hidden" asp-for="TriggerMessage" value="" />
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Đặt cảnh báo</button>
+        <a asp-action="Index" asp-controller="AlertView" class="btn btn-secondary">Hủy</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

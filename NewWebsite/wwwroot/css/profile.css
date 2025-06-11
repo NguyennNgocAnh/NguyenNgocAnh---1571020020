@@ -1,0 +1,76 @@
+﻿/* ======= Tiêu đề ======= */
+h1, h2 {
+    color: #08306b;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* ======= Bảng và ô nhập ======= */
+table.table {
+    width: 100%;
+    background-color: #f9fbfd;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    table.table th, table.table td {
+        padding: 14px 16px;
+        vertical-align: middle;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    table.table th {
+        background-color: #f0f4f8;
+        color: #08306b;
+        width: 180px;
+        text-align: left;
+        font-weight: 500;
+    }
+
+/* ======= Ô nhập ======= */
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+    padding: 10px 14px;
+    width: 100%;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    transition: border 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="file"]:focus {
+        border-color: #08306b;
+        box-shadow: 0 0 0 2px rgba(8, 48, 107, 0.2);
+        outline: none;
+    }
+
+/* ======= Nút lưu ======= */
+button {
+    padding: 10px 20px;
+    background-color: #08306b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+    button:hover {
+        background-color: #0a2a59;
+        transform: translateY(-1px);
+    }
+
+/* ======= Avatar ======= */
+img {
+    border-radius: 8px;
+    border: 2px solid #08306b;
+    margin-bottom: 10px;
+}

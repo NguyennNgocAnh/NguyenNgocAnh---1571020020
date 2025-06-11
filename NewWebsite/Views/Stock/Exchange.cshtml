@@ -1,0 +1,27 @@
+﻿@model List<Website.Model.Entities.Stock>
+
+@{
+    ViewData["Title"] = "Phân tích tài chính";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/stock.css" />
+
+<div class="stock-page-container">
+    <h1 class="stock-page-title">Biểu đồ trực tuyến phân tích tài chính</h1>
+
+    <div class="stock-list">
+        @foreach (var stock in Model)
+        {
+            <div class="stock-card">
+                <div class="stock-info">
+                    <h2 class="stock-name">@stock.StockName</h2>
+                    <span class="stock-exchange">@stock.Exchange</span>
+                </div>
+                <a class="detail-link" href="@Url.Action("Details", "Stock", new { id = stock.StockId })">
+                    Xem chi tiết
+                </a>
+            </div>
+        }
+    </div>
+</div>

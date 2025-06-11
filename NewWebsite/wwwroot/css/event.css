@@ -1,0 +1,106 @@
+﻿/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+.event-list-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .event-header h2 {
+        font-size: 28px;
+        color: #08306b;
+        font-weight: 700;
+    }
+
+.btn-add-event {
+    background-color: #08306b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-add-event:hover {
+        background-color: #0a4a94;
+    }
+
+/* Cảnh báo không có sự kiện */
+.no-event-message {
+    color: #f44336;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Bảng danh sách sự kiện */
+.event-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+    .event-list-table th,
+    .event-list-table td {
+        padding: 15px;
+        text-align: left;
+        border-right: 1px solid #ddd; /* Đường kẻ ngăn giữa các cột */
+    }
+
+    .event-list-table th {
+        background-color: #003366;
+        color: white;
+        font-weight: bold;
+    }
+
+    .event-list-table td {
+        color: #555;
+    }
+
+    .event-list-table tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Đảm bảo có đường viền ngăn giữa cột cuối cùng */
+    .event-list-table td:last-child,
+    .event-list-table th:last-child {
+        border-right: none;
+    }
+
+    .event-list-table td a {
+        color: #0a4a94;
+        text-decoration: none;
+        padding: 8px 15px;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+
+        .event-list-table td a:hover {
+            background-color: #08306b;
+            color: white;
+        }

@@ -1,0 +1,291 @@
+﻿@model Website.Model.Entities.MarketPrice
+@using Newtonsoft.Json
+
+@{
+    ViewBag.Title = "Trang Giá Thị Trường";
+}
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="~/css/market.css" asp-append-version="true" />
+</head>
+<div class="container mt-5">
+    <section class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="section-title m-0">Bảng Giá Thị Trường</h2>
+        </div>
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Tên Chứng Khoán</th>
+                    <th>Ngày</th>
+                    <th>Giá Mở Cửa</th>
+                    <th>Giá Trần</th>
+                    <th>Giá Sàn</th>
+                    <th>Giá Đóng Cửa</th>
+                    <th>Khớp Lệnh</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.MarketList)
+                {
+                    <tr>
+                        <td>
+                            <a href="@Url.Action("Create", "AssetManagement", new { stockName = item.StockName })" class="text-decoration-none">
+                                @item.StockName
+                            </a>
+                        </td>
+                        <td>@item.PriceDate.ToString("dd/MM/yyyy")</td>
+                        <td>@item.OpenPrice</td>
+                        <td>@item.CeilingPrice</td>
+                        <td>@item.FloorPrice</td>
+                        <td>@item.LowPrice</td>
+                        <td>@item.MatchedVolume</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </section>
+    @{
+        int maxPageButtons = 7; 
+        int currentPage = ViewBag.CurrentPage ?? 1;
+        int totalPages = ViewBag.TotalPages ?? 1;
+
+        int startPage = 1;
+        int endPage = totalPages;
+
+        if (totalPages > maxPageButtons)
+        {
+            int half = maxPageButtons / 2;
+
+            if (currentPage <= half + 1)
+            {
+                startPage = 1;
+                endPage = maxPageButtons;
+            }
+            else if (currentPage + half >= totalPages)
+            {
+                startPage = totalPages - maxPageButtons + 1;
+                endPage = totalPages;
+            }
+            else
+            {
+                startPage = currentPage - half;
+                endPage = currentPage + half;
+            }
+        }
+    }
+
+    <div class="pagination__wrapper">
+        @* Nút Prev *@
+        @if (currentPage > 1)
+        {
+            <a class="pagination__btn" href="@Url.Action("Index", new { page = currentPage - 1, pageSize = ViewBag.PageSize })">&lt;</a>
+        }
+        else
+        {
+            <span class="pagination__btn disabled">&lt;</span>
+        }
+
+        <div class="pagination__option">
+            @* Luôn hiển thị trang đầu tiên *@
+            @if (startPage > 1)
+            {
+                <a href="@Url.Action("Index", new { page = 1, pageSize = ViewBag.PageSize })">1</a>
+                @if (startPage > 2)
+                {
+                    <span class="ellipsis">...</span>
+                }
+            }
+
+            @for (int i = startPage; i <= endPage; i++)
+            {
+                if (i == currentPage)
+                {
+                    <a href="@Url.Action("Index", new { page = i, pageSize = ViewBag.PageSize })" class="active">@i</a>
+                }
+                else
+                {
+                    <a href="@Url.Action("Index", new { page = i, pageSize = ViewBag.PageSize })">@i</a>
+                }
+            }
+
+            @* Luôn hiển thị trang cuối cùng *@
+            @if (endPage < totalPages)
+            {
+                if (endPage < totalPages - 1)
+                {
+                    <span class="ellipsis">...</span>
+                }
+                <a href="@Url.Action("Index", new { page = totalPages, pageSize = ViewBag.PageSize })">@totalPages</a>
+            }
+        </div>
+
+        @* Nút Next *@
+        @if (currentPage < totalPages)
+        {
+            <a class="pagination__btn" href="@Url.Action("Index", new { page = currentPage + 1, pageSize = ViewBag.PageSize })">&gt;</a>
+        }
+        else
+        {
+            <span class="pagination__btn disabled">&gt;</span>
+        }
+    </div>
+
+    <section class="mb-5">
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+            @for (int i = 1; i <= 4; i++)
+            {
+                <div style="flex: 0 0 45%;">
+                    <canvas id="chart-@i" style="max-width: 100%; height: 300px;"></canvas>
+                </div>
+            }
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="section-title">Bảng chứng khoán</h2>
+        <div class="row">
+            <!-- Cột trái: Bảng chứng khoán -->
+            <div class="col-md-8">
+                <!-- thêm div này -->
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Tên</th>
+                            <th>Thay đổi</th>
+                            <th>Ngành</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var stock in ViewBag.StockList)
+                        {
+                            <tr>
+                                <td>
+                                    <a href="@Url.Action("Create", "AlertView", new { stockId = stock.StockId })">
+                                        @stock.StockName
+                                    </a>
+                                </td>
+                                <td>@stock.Exchange</td>
+                                <td>@stock.Industry?.IndustryName</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Cột phải: Banner -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="~/img/slide/slide20.jpg" class="img-fluid" alt="Banner" style="width: 410px; height: 358px; " />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="section-title">Tin Tức Liên Quan</h2>
+        <div class="row">
+            @foreach (var news in ViewBag.RelatedNews)
+            {
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="~/img/news/@news.Image1" class="card-img-top" style="height: 180px; object-fit: cover;" />
+                        <div class="card-body">
+                            <h5 class="card-title">@news.Title</h5>
+                            <p class="card-text">@news.Content.Substring(0, Math.Min(100, news.Content.Length))...</p>
+                            <a href="/News/Detail/@news.NewsId" class="btn btn-sm btn-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Báo Cáo Liên Quan</h2>
+
+        @if (ViewBag.RelatedReports == null || ((List<Website.Model.Entities.Report>)ViewBag.RelatedReports).Count == 0)
+        {
+            <p>Không có báo cáo liên quan.</p>
+        }
+        else
+        {
+            <ul class="list-group">
+                @foreach (var report in (List<Website.Model.Entities.Report>)ViewBag.RelatedReports)
+                {
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>@report.Title</strong><br />
+                            <small>@report.Content</small>
+                        </div>
+                        <a class="btn btn-outline-secondary btn-sm"
+                           href="@Url.Content("~/reports/" + report.FilePath)"
+                           target="_blank" download>
+                            Tải PDF
+                        </a>
+                    </li>
+                }
+            </ul>
+        }
+    </section>
+</div>
+
+@for (int i = 1; i <= 4; i++)
+{
+    <canvas id="chart-@i"></canvas>
+}
+<script>
+    const allConfigs = [
+        {
+            labels: @Html.Raw(JsonConvert.SerializeObject(ViewBag.Labels1)),
+            datasets: @Html.Raw(JsonConvert.SerializeObject(ViewBag.Datasets1)),
+            title: "Khớp lệnh theo tháng"
+        },
+        {
+            labels: @Html.Raw(JsonConvert.SerializeObject(ViewBag.Labels2)),
+            datasets: @Html.Raw(JsonConvert.SerializeObject(ViewBag.Datasets2)),
+            title: "Giá cao nhất theo năm"
+        },
+        {
+            labels: @Html.Raw(JsonConvert.SerializeObject(ViewBag.Labels3)),
+            datasets: @Html.Raw(JsonConvert.SerializeObject(ViewBag.Datasets3)),
+            title: "Lợi nhuận trung bình theo tháng"
+        },
+        {
+            labels: @Html.Raw(JsonConvert.SerializeObject(ViewBag.Labels4)),
+            datasets: @Html.Raw(JsonConvert.SerializeObject(ViewBag.Datasets4)),
+            title: "Số giao dịch theo năm"
+        }
+    ];
+
+    window.onload = function () {
+        allConfigs.forEach((cfg, idx) => {
+            const ctx = document.getElementById(`chart-${idx + 1}`)?.getContext("2d");
+            if (ctx) {
+                new Chart(ctx, {
+                    type: (idx === 1 || idx === 2 || idx === 3) ? 'bar' : 'line', // đổi 2,3,4 sang bar chart
+                    data: {
+                        labels: cfg.labels,
+                        datasets: cfg.datasets
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: cfg.title
+                            },
+                            legend: { display: true }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    };
+</script>

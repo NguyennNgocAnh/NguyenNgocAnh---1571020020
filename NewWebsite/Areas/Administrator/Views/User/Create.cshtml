@@ -1,0 +1,51 @@
+﻿@model Website.Model.Entities.User
+@{
+    ViewData["Title"] = "Thêm người dùng";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/admin/news.css" asp-append-version="true" />
+
+<div class="main-panel px-3 py-2">
+    <div class="card shadow-sm rounded-3">
+        <div class="card-body">
+            <h5 class="card-title mb-3">THÊM MỚI NGƯỜI DÙNG</h5>
+
+            <form asp-action="Create" asp-controller="User" asp-area="Administrator" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="Username" class="form-label">Tên đăng nhập</label>
+                    <input asp-for="Username" class="form-control" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Email" class="form-label">Email</label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="UserRole" class="form-label">Quyền</label>
+                    <select asp-for="UserRole" class="form-select">
+                        <option value="">-- Chọn quyền --</option>
+                        <option>Admin</option>
+                        <option>Employee</option>
+                        <option>User</option>
+                    </select>
+                    <span asp-validation-for="UserRole" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Avatar" class="form-label">Avatar (chọn file ảnh)</label>
+                    <input asp-for="Avatar" type="file" class="form-control" />
+                    <span asp-validation-for="Avatar" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-add-news">
+                    <i class="fas fa-save"></i> Lưu lại
+                </button>
+                <a href="/Administrator/User/Index" class="btn btn-secondary ms-2">Hủy</a>
+            </form>
+        </div>
+    </div>
+</div>
+

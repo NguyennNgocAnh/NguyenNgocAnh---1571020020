@@ -1,0 +1,63 @@
+﻿@model Website.Model.Entities.User
+@{
+    ViewData["Title"] = "Chỉnh sửa người dùng";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link rel="stylesheet" href="~/admin/news.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<div class="main-panel px-3 py-2">
+    <div class="card shadow-sm rounded-3">
+        <div class="card-body">
+            <h5 class="card-title mb-3">CHỈNH SỬA NGƯỜI DÙNG</h5>
+
+            <form asp-action="Edit" method="post" enctype="multipart/form-data">
+                <input type="hidden" asp-for="UserId" />
+
+                <div class="mb-3">
+                    <label for="Username" class="form-label">Tên đăng nhập</label>
+                    <input asp-for="Username" class="form-control" readonly />
+                </div>
+
+                <div class="mb-3">
+                    <label for="Email" class="form-label">Email</label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="UserRole" class="form-label">Quyền</label>
+                    <select asp-for="UserRole" class="form-select">
+                        <option value="">-- Chọn quyền --</option>
+                        <option selected="@(Model.UserRole == "Admin" ? "selected" : null)">Admin</option>
+                        <option selected="@(Model.UserRole == "Employee" ? "selected" : null)">Employee</option>
+                        <option selected="@(Model.UserRole == "User" ? "selected" : null)">User</option>
+                    </select>
+                    <span asp-validation-for="UserRole" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label>Avatar hiện tại</label><br />
+                    <img src="~/img/admin/Avatar/@Model.Avatar" class="news-thumbnail mb-2" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="Avatar" class="form-label">Thay đổi Avatar (chọn file ảnh nếu muốn)</label>
+                    <input asp-for="Avatar" type="file" class="form-control" />
+                    <span asp-validation-for="Avatar" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-add-news">
+                    <i class="fas fa-save"></i> Lưu thay đổi
+                </button>
+                <a href="/Administrator/User/Index" class="btn btn-secondary ms-2">Hủy</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

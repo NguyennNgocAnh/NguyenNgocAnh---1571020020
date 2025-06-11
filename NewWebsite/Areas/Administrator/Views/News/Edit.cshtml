@@ -1,0 +1,72 @@
+﻿@model Website.Model.Entities.News
+@{
+    ViewData["Title"] = "Sửa tin tức";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/admin/create.css" asp-append-version="true" />
+</head>
+<div class="news-create-container">
+    <h2 class="card-title">@ViewData["Title"]</h2> <form asp-action="Edit" enctype="multipart/form-data" method="post">
+        <input type="hidden" asp-for="NewsId" />
+        <div class="form-row">
+            <div class="form-group half-width">
+                <label asp-for="Title">Tiêu đề</label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group half-width">
+                <label asp-for="PublishDate">Ngày đăng</label>
+                <input asp-for="PublishDate" class="form-control" type="datetime-local" />
+                <span asp-validation-for="PublishDate" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Content">Nội dung</label>
+            <textarea asp-for="Content" class="form-control" id="ContentEditor"></textarea>
+            <span asp-validation-for="Content" class="text-danger"></span>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group half-width">
+                <label asp-for="Image1">Ảnh</label>
+                <input asp-for="Image1" class="form-control" type="file" name="AnhFile" />
+                <span asp-validation-for="Image1" class="text-danger"></span>
+            </div>
+            <div class="form-group half-width">
+                <label asp-for="UserId">Người đăng</label>
+                <input asp-for="UserId" class="form-control" />
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="CategoryId">Danh mục</label>
+            <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoriesList">
+                <option value="">-- Chọn danh mục --</option>
+            </select>
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn-submit">Cập nhật</button>
+        <a href="/Administrator/News/Index" class="btn-submit">Hủy</a>
+    </form>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="https://cdn.ckeditor.com/4.21.0/full/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('ContentEditor', {
+        toolbar: [
+        { name: 'styles', items: ['Format', 'FontSize'] },
+        { name: 'basicstyles', items: ['Bold', 'Italic', 'Underline'] },
+        { name: 'paragraph', items: ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'] },
+        { name: 'insert', items: ['Image', 'Table', 'HorizontalRule'] },
+        { name: 'clipboard', items: ['Undo', 'Redo'] },
+        { name: 'document', items: ['Source'] }
+        ]
+        });
+    </script>
+}

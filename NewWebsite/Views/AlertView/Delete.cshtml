@@ -1,0 +1,28 @@
+﻿@model Website.Model.Entities.Alert
+
+@{
+    ViewData["Title"] = "Xóa Cảnh Báo";
+}
+<link rel="stylesheet" href="~/css/alert.css" asp-append-version="true" />
+
+<h2>Xóa Cảnh Báo</h2>
+
+<h3>Bạn có chắc chắn muốn xóa cảnh báo này?</h3>
+<div>
+    <h4>@Model.AlertName</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Cổ phiếu</dt>
+        <dd class="col-sm-10">@Model.Stock?.StockName</dd>
+        <dt class="col-sm-2">Ngưỡng giá trên</dt>
+        <dd class="col-sm-10">@Model.PriceThresholdUp</dd>
+        <dt class="col-sm-2">Ngưỡng giá dưới</dt>
+        <dd class="col-sm-10">@Model.PriceThresholdDown</dd>
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="AlertId" />
+        <button type="submit" class="btn btn-danger">Xóa</button>
+        <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+    </form>
+</div>

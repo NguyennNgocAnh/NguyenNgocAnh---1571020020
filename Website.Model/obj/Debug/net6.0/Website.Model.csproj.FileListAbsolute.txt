@@ -1,0 +1,14 @@
+C:\Users\ADMIN\Downloads\NewWebsite\Website.Model\bin\Debug\net6.0\Website.Model.deps.json
+C:\Users\ADMIN\Downloads\NewWebsite\Website.Model\bin\Debug\net6.0\Website.Model.runtimeconfig.json
+C:\Users\ADMIN\Downloads\NewWebsite\Website.Model\bin\Debug\net6.0\Website.Model.dll
+C:\Users\ADMIN\Downloads\NewWebsite\Website.Model\bin\Debug\net6.0\Website.Model.pdb
+C:\Users\ADMIN\Downloads\NewWebsite\Website.Model\obj\Debug\net6.0\Website.Model.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Downloads\NewWebsite\Website.Model\obj\Debug\net6.0\Website.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Downloads\NewWebsite\Website.Model\obj\Debug\net6.0\Website.Model.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Downloads\NewWebsite\Website.Model\obj\Debug\net6.0\Website.Model.AssemblyInfo.cs
+C:\Users\ADMIN\Downloads\NewWebsite\Website.Model\obj\Debug\net6.0\Website.Model.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Downloads\NewWebsite\Website.Model\obj\Debug\net6.0\Website.Model.dll
+C:\Users\ADMIN\Downloads\NewWebsite\Website.Model\obj\Debug\net6.0\refint\Website.Model.dll
+C:\Users\ADMIN\Downloads\NewWebsite\Website.Model\obj\Debug\net6.0\Website.Model.pdb
+C:\Users\ADMIN\Downloads\NewWebsite\Website.Model\obj\Debug\net6.0\Website.Model.genruntimeconfig.cache
+C:\Users\ADMIN\Downloads\NewWebsite\Website.Model\obj\Debug\net6.0\ref\Website.Model.dll

@@ -1,0 +1,57 @@
+﻿@model List<Website.Model.Entities.Event>
+@{
+    ViewData["Title"] = "Danh sách sự kiện";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/event.css" asp-append-version="true" />
+</head>
+
+<div class="event-list-container">
+    <div class="event-header">
+        <h2>Danh sách sự kiện</h2>
+        <a class="btn-add-event" asp-action="Create">Thêm sự kiện</a>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="no-event-message">Không có sự kiện nào được tạo.</div>
+    }
+    else
+    {
+        <table class="event-list-table">
+            <thead>
+                <tr>
+                    <th>Tên sự kiện</th>
+                    <th>Mô tả</th>
+                    <th>Hành động</th>
+                    <th>Lưu sự kiện</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ev in Model)
+                {
+                    <tr>
+                        <td>@ev.EventName</td>
+                        <td>@ev.Description</td>
+                        <td>
+                            <a class="btn edit" asp-action="Edit" asp-route-id="@ev.EventId">Sửa</a>
+                            <a class="btn delete" asp-action="Delete" asp-route-id="@ev.EventId"
+                               onclick="return confirm('Bạn có chắc chắn muốn xóa sự kiện này?');">
+                                Xóa
+                            </a>
+                        </td>
+                        <td>
+                            <a class="btn-download-pdf"
+                               asp-action="DownloadPdf"
+                               asp-route-id="@ev.EventId">
+                                Tải PDF
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

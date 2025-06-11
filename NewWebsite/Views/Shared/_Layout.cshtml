@@ -1,0 +1,155 @@
+﻿@using Microsoft.AspNetCore.Http
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - NewsWebsite</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/NewsWebsite.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+    <link href="img/favicon.ico" rel="icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!--Đầu trang-->
+    <div class="container-fluid top-bar bg-primary text-white px-lg-5">
+        <div class="row align-items-center justify-content-between">
+            <!-- Bên trái -->
+            <div class="col-lg-6 d-flex flex-wrap align-items-center py-2 gap-3">
+                <small><i class="fas fa-sun mr-2"></i> Việt Nam, Hà Nội +30°</small>
+                <small><i class="fa fa-phone mr-2"></i> 0393648109</small>
+
+                @{
+                    var username = Context.Session.GetString("Username");
+                }
+
+                <div class="nav-item dropdown">
+                    @if (!string.IsNullOrEmpty(username))
+                    {
+                        <a class="nav-link dropdown-toggle text-white font-weight-bold" href="#" id="accountDropdown" role="button" data-toggle="dropdown">
+                            Xin chào, @username
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="accountDropdown">
+                            <a class="dropdown-item" href="/User/Profile">Thông tin cá nhân</a>
+                            <a class="dropdown-item" href="/Member/Settings">Cài đặt</a>
+                            <a class="dropdown-item" href="/Account/Logout">Đăng xuất</a>
+                        </div>
+                    }
+                    else
+                    {
+                        <a class="nav-link dropdown-toggle text-white font-weight-bold" href="#" id="accountDropdown" role="button" data-toggle="dropdown">
+                            Tài khoản
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="accountDropdown">
+                            <a class="dropdown-item" href="/Account/Login">Đăng nhập</a>
+                            <a class="dropdown-item" href="/Account/Register">Đăng ký</a>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <!-- Bên phải -->
+            <div class="col-lg-6 d-flex justify-content-end align-items-center py-2">
+                <a class="text-white font-weight-bold mx-4" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white font-weight-bold mx-2" href="#"><i class="fas fa-envelope"></i></a>
+                <a class="text-white font-weight-bold mx-4" href="#"><i class="fas fa-bell"></i></a>
+            </div>
+        </div>
+    </div>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/img/layout/StockNews.png" alt="Logo" style="height: 35px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Trang chủ</a>
+                        </li>
+                    </ul>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" asp-controller="News" asp-action="Index" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tin tức
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="/News/Categories/1">Tin chứng khoán</a></li>
+                            <li><a class="dropdown-item" href="/News/Categories/2">Tin bất động sản</a></li>
+                            <li><a class="dropdown-item" href="/News/Categories/3">Tin doanh nghiệp</a></li>
+                            <li><a class="dropdown-item" href="/News/Categories/4">Tài chính quốc tế</a></li>
+                            <li><a class="dropdown-item" href="/News/Categories/5">Vĩ mô</a></li>
+                            <li><a class="dropdown-item" href="/News/Categories/6">Ngân hàng</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tài sản
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="/AssetManagement/Index">Quản lý tài sản</a></li>
+                            <li><a class="dropdown-item" href="/AssetManagement/History">Lịch sử giao dịch</a></li>
+                            <li><a class="dropdown-item" href="/AlertView/Index">Cảnh báo</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Thị trường
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="/MarketPrices/Index">Giá thị trường</a></li>
+                            <li><a class="dropdown-item" href="/Stock/Exchange">Biểu đồ phân tích tài chính</a></li>
+                            <li><a class="dropdown-item" href="/Forecast/Index">Dự đoán giá</a></li>
+                            <li><a class="dropdown-item" href="/Event/Index">Sự kiện</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Liên hệ
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="/Notification/Create">Đánh giá</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="copyright">
+                Copyright © 2025 Bản quyền | © 2025 Bảo lưu mọi quyền | Website được tạo bởi NgocAnh
+            </p>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

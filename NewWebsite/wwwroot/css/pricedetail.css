@@ -1,0 +1,106 @@
+﻿/* Popup overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex; /* Lúc ẩn thì bạn dùng JS set display: none */
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+/* Popup content */
+.popup-content {
+    position: relative;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    /* Thêm transition mượt */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    user-select: none; /* tránh chọn chữ khi nhấn */
+    transition: color 0.2s ease;
+}
+
+    .close-btn:hover {
+        color: #d33; /* đỏ nổi bật khi hover */
+    }
+
+/* Heading */
+.popup-content h2 {
+    margin-top: 0;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Table */
+.popup-content table {
+    width: 100%;
+    font-size: 14px;
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+
+/* Các ô header và data */
+.popup-content th,
+.popup-content td {
+    padding: 8px 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+/* Background cho thead */
+.popup-content thead {
+    background-color: #f1f3f5;
+    font-weight: 700;
+    color: #444;
+}
+
+/* Container bảng có scroll ngang */
+.table-container {
+    overflow-x: auto;
+}
+
+/* Responsive: khi màn nhỏ hơn 600px, table font nhỏ hơn, padding nhỏ hơn */
+@media (max-width: 600px) {
+    .popup-content {
+        padding: 15px 20px;
+        width: 95%;
+    }
+
+        .popup-content table {
+            font-size: 12px;
+        }
+
+        .popup-content th,
+        .popup-content td {
+            padding: 6px 8px;
+        }
+
+    .close-btn {
+        font-size: 24px;
+        top: 8px;
+        right: 10px;
+    }
+}

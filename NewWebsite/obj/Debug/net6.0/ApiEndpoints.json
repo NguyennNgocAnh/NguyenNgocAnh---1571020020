@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "CrawlController",
+    "Method": "CrawlAndSaveMultiple",
+    "RelativePath": "api/Crawl/crawl-and-save-multiple",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tickers",
+        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CrawlController",
+    "Method": "PreviewStockData",
+    "RelativePath": "api/Crawl/preview-stock-data",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

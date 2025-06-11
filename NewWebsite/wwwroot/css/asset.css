@@ -1,0 +1,241 @@
+﻿/* -----------------------------------
+   Global Styles
+----------------------------------- */
+body {
+    background-color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* -----------------------------------
+   Chart & Table Section
+----------------------------------- */
+.sector-chart, .sector-table {
+    background: linear-gradient(135deg, #08306b, #0a4a94);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.sector-header {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.table {
+    text-align: center;
+}
+
+.thead, .table th {
+    background-color: #08306b !important;
+    color: white !important;
+    text-align: center !important;
+}
+
+.table tbody tr:hover {
+    background-color: #e6f2ff;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+    padding: 12px;
+}
+
+/* Biến động giá */
+.change-positive {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.change-negative {
+    color: #e53935;
+    font-weight: bold;
+}
+
+/* -----------------------------------
+   Nút và Icon
+----------------------------------- */
+.btn-primary {
+    background: #08306b !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 0px;
+    transition: all 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background: #021f40 !important;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+
+.btn-outline-secondary {
+    border: 1px solid #6c757d;
+    color: #6c757d;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+    .btn-outline-secondary:hover {
+        background-color: #e9ecef;
+    }
+
+.fa-edit, .fa-trash {
+    color: #08306b;
+    transition: 0.3s;
+}
+
+    .fa-edit:hover {
+        color: #0a4a94;
+    }
+
+    .fa-trash:hover {
+        color: #e53935;
+    }
+
+.text-primary {
+    color: #08306b !important;
+}
+
+/* -----------------------------------
+   Bộ lọc ngày
+----------------------------------- */
+.filter-section label {
+    font-weight: 600;
+    color: #08306b;
+    margin-right: 12px;
+}
+
+#dateFilter {
+    border: 1px solid #08306b;
+    border-radius: 6px;
+    padding: 8px 15px;
+    margin-left: 8px;
+    transition: all 0.3s ease;
+}
+
+    #dateFilter:focus {
+        border-color: #0a4a94;
+        box-shadow: 0 0 0 0.2rem rgba(10, 74, 148, 0.25);
+    }
+
+/* -----------------------------------
+   Form Chung (Create + Edit)
+----------------------------------- */
+.custom-form-card {
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease;
+    border-radius: 16px;
+}
+
+    .custom-form-card:hover {
+        box-shadow: 0 16px 38px rgba(0, 0, 0, 0.12);
+    }
+
+    .custom-form-card .card-header {
+        background: linear-gradient(to right, #08306b, #0a4a94);
+        color: #ffffff;
+        text-align: center;
+        font-weight: 700;
+        font-size: 20px;
+        padding: 12px 0;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+.card-header h4 i {
+    color: #ffdd57;
+}
+
+/* Input */
+label.form-label {
+    font-weight: 600;
+    color: #08306b;
+}
+
+input.form-control {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ced4da;
+    transition: 0.2s;
+}
+
+    input.form-control:focus {
+        border-color: #08306b;
+        box-shadow: 0 0 0 0.15rem rgba(8, 48, 107, 0.25);
+    }
+
+/* -----------------------------------
+   Popup Overlay
+----------------------------------- */
+.asset-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.asset-popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* -----------------------------------
+   Responsive
+----------------------------------- */
+@media (max-width: 768px) {
+    .custom-form-card {
+        padding: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+.chart-container {
+    position: relative;
+    width: 100% !important;
+    height: 500px !important;
+}
+.chart-title {
+    text-align: center;
+    color: #08306b;
+    font-weight: bold;
+}
+.text-success {
+    color: green;
+}
+
+.text-danger {
+    color: red;
+}
+.modal-content {
+    margin-top: 222px;
+}

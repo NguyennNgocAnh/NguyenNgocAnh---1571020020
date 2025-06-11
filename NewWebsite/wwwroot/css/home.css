@@ -1,0 +1,267 @@
+﻿body {
+    background-color: #f4f6f9;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.small-title,
+.main-title,
+.bds-title {
+    font-weight: bold;
+}
+h2 {
+    color: #08306b;
+}
+
+.list-group-item a {
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .list-group-item a:hover {
+        color: #08306b; 
+        text-decoration: none; 
+    }
+.card-header {
+    background-color: #08306b;
+}
+.small-btn {
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5%;
+    padding: 0;
+    z-index: 5;
+}
+
+.carousel-control-next {
+    left: 50px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.carousel img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-inner {
+    transition: transform 0.3s ease;
+}
+
+
+/*Danh sách tin tức*/
+.stock-category {
+    margin-top: 20px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+    margin-bottom: 15px;
+}
+
+.news-container {
+    margin-bottom: 30px;
+}
+
+.news-wrapper .main-news .main-title {
+    display: block;
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 5px;
+}
+
+.news-wrapper .small-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3em;
+    margin-left: 0;
+    margin-bottom: 10px !important;
+}
+
+.bds-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    line-height: 1.5em;
+    max-height: 3em;
+    white-space: normal;
+}
+
+    .bds-title a {
+        color: #222;
+        text-decoration: none;
+    }
+
+        .bds-title a:hover {
+            color: #08306b;
+            text-decoration: none;
+        }
+
+.bds-item {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.bds-news {
+    gap: 15px;
+}
+
+button {
+    background-color: #08306b; /* Màu nền nút */
+    color: white; /* Màu chữ trên nút */
+    border: none; /* Loại bỏ đường viền mặc định */
+    padding: 10px 20px; /* Thêm khoảng cách cho nút */
+    font-size: 16px; /* Kích thước chữ */
+    border-radius: 5px; /* Bo góc nút */
+    cursor: pointer; /* Thêm hiệu ứng chuột khi hover */
+}
+
+    button:hover {
+        background-color: #06507b; /* Màu nền khi hover */
+    }
+
+.main-title a,
+.small-title a {
+    color: #222;
+    text-decoration: none;
+}
+
+    .main-title a:hover,
+    .small-title a:hover {
+        color: #08306b;
+        text-decoration: none;
+    }
+
+.main-news img {
+    width: 280px;
+    height: 217px;
+}
+
+.fixed-size-img {
+    width: 150px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.small-news {
+    display: flex;
+    flex-direction: column;
+}
+
+.small-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/*Doanh nghiệp*/
+.dn-wrapper {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 0 20px;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+}
+
+.dn-news {
+    flex: 0 0 calc(33.333% - 20px);
+}
+
+.dn-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+    .dn-title a {
+        color: #222;
+        text-decoration: none;
+    }
+
+        .dn-title a:hover {
+            color: #08306b;
+            text-decoration: none;
+        }
+
+/*Danh mục category*/
+.category-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.category-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.category-item {
+    width: 22%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+    .category-item:hover {
+        transform: scale(1.05);
+    }
+
+    .category-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 0.5rem;
+    }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-text {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    margin: 0 auto 20px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #007bff;
+}

@@ -1,0 +1,196 @@
+﻿body {
+    background-color: #f4f6f9;
+    font-family: 'Segoe UI', sans-serif;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #08306b;
+    border-left: 5px solid #08306b; 
+    padding-left: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+table, th, td {
+    border: 1px solid #dcdcdc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+th {
+    background-color: #08306b !important;
+    color: white !important;
+}
+
+
+td:nth-child(3),
+td:nth-child(4),
+td:nth-child(5),
+td:nth-child(6) {
+    background-color: #f0f4f8;
+}
+
+td:nth-child(7),
+td:nth-child(8),
+td:nth-child(9) {
+    background-color: #f7f9fc;
+}
+
+td:nth-child(10),
+td:nth-child(11) {
+    background-color: #e6f7ea;
+    color: #2ecc71;
+    font-weight: 600;
+}
+
+td:nth-child(12),
+td:nth-child(13) {
+    background-color: #fdecea;
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.text-success {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.text-danger {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #08306b; /* Đổi từ #2c3e50 */
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #7f8c8d;
+}
+
+.list-group-item {
+    font-size: 0.95rem;
+}
+
+.btn-outline-secondary {
+    border-radius: 20px;
+    padding: 5px 15px;
+    border: 1px solid #08306b; /* Đổi từ #1e90ff */
+    color: #08306b; /* Đổi từ #1e90ff */
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+    .btn-outline-secondary:hover {
+        background-color: #08306b; /* Đổi từ #1e90ff */
+        color: white;
+    }
+
+.btn-primary {
+    background-color: #08306b;
+    border-color: #08306b;
+    color: white;
+    transition: 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #061f3c;
+        border-color: #061f3c;
+    }
+
+/*Phân trang*/
+.pagination__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #08306b;
+    border-radius: 10px;
+    padding: 6px 14px;
+    gap: 8px;
+    background-color: #fff;
+    user-select: none;
+    box-shadow: 0 0 12px rgba(8, 48, 107, 0.25);
+    margin: 20px auto;
+    max-width: max-content;
+}
+
+.pagination__option {
+    display: flex;
+    gap: 8px;
+}
+
+    .pagination__option a {
+        padding: 8px 14px;
+        border-radius: 8px;
+        border: 1.5px solid transparent;
+        color: #08306b;
+        text-decoration: none;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        user-select: none;
+    }
+
+        .pagination__option a:hover:not(.active) {
+            background-color: #d0d9f4; /* nhạt hơn #e1e7ff nhưng tông xanh hợp */
+            border-color: #08306b;
+            color: #041b3a; /* màu đậm hơn */
+        }
+
+        .pagination__option a.active {
+            font-weight: 700;
+            background-color: #08306b;
+            color: white !important;
+            border-color: #041b3a;
+            box-shadow: 0 0 10px rgba(8, 48, 107, 0.6);
+            cursor: default;
+        }
+
+    .pagination__option .ellipsis {
+        padding: 8px 10px;
+        color: #888;
+        user-select: none;
+        font-weight: 600;
+    }
+
+.pagination__btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    background-color: #08306b;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+    .pagination__btn:hover:not(.disabled) {
+        background-color: #041b3a;
+    }
+
+    .pagination__btn.disabled {
+        background-color: #a3b1d1; /* tông nhạt hợp tông #08306b */
+        cursor: default;
+        color: #f0f0f0;
+        pointer-events: none;
+        user-select: none;
+    }

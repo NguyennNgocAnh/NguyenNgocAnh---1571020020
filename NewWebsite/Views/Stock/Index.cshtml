@@ -1,0 +1,31 @@
+﻿@model Website.Model.Entities.Stock
+
+<h2>Chi tiết mã: @Model.StockName</h2>
+
+<p>Sàn: @Model.Exchange</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ngày</th>
+            <th>Giá mở cửa</th>
+            <th>Giá cao nhất</th>
+            <th>Giá thấp nhất</th>
+            <th>Giá trung bình</th>
+            <th>Khối lượng</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var price in Model.MarketPrices)
+        {
+            <tr>
+                <td>@price.PriceDate?.ToString("dd/MM/yyyy")</td>
+                <td>@price.OpenPrice</td>
+                <td>@price.HighPrice</td>
+                <td>@price.LowPrice</td>
+                <td>@price.AveragePrice</td>
+                <td>@price.MatchedVolume</td>
+            </tr>
+        }
+    </tbody>
+</table>

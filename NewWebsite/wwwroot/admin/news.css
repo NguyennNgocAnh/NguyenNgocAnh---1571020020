@@ -1,0 +1,105 @@
+﻿/* Tên tiêu đề bảng */
+.card-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #08306b;
+}
+
+/* Bảng đẹp hơn */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+    .table th, .table td {
+        vertical-align: middle;
+        text-align: center;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+.table-header th {
+    color: #08306b !important;
+    background-color: white !important;
+    font-weight: bold !important;
+}
+
+
+/* Ảnh nhỏ gọn hơn */
+.news-thumbnail {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Rút gọn nội dung */
+.truncate-text {
+    display: inline-block;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Responsive bảng */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Nút nhỏ */
+.btn-sm {
+    padding: 5px 8px;
+    font-size: 13px;
+}
+
+.btn-add-news {
+    background-color: #08306b;
+    border: none;
+    color: white !important;
+    padding: 10px 18px;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+    .btn-add-news:hover {
+        background-color: #0a4b96;
+        transform: scale(1.03);
+        color: #fff !important;
+        text-decoration: none;
+    }
+
+.btn-custom-edit {
+    background-color: #08306b;
+    border-color: #08306b;
+    color: white;
+}
+
+.btn-custom-delete {
+    background-color: #e91e63;
+    border-color: #e91e63;
+    color: white;
+}
+
+.action-buttons a {
+    display: inline-block;
+    margin-bottom: 4px; 
+}
+
+@media (min-width: 576px) {
+    .action-buttons a {
+        margin-bottom: 0;
+        margin-right: 4px; 
+    }
+}

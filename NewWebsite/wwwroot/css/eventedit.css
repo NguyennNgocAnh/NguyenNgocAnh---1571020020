@@ -1,0 +1,136 @@
+﻿/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Thẻ tiêu đề chung */
+h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #08306b;
+    margin-bottom: 20px;
+}
+
+/* Các phần nhập liệu chung */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-size: 16px;
+    color: #08306b;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.form-input, textarea.form-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+    .form-input:focus, textarea.form-input:focus {
+        border-color: #08306b;
+        box-shadow: 0 0 0 0.15rem rgba(8, 48, 107, 0.25);
+    }
+
+.form-error-message {
+    color: #f44336;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Bảng và hành động */
+.event-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+    .event-list-table th, .event-list-table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .event-list-table th {
+        background-color: #08306b;
+        color: white;
+    }
+
+    .event-list-table tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+/* Nút và các hành động */
+.btn-add-event, .btn-submit, .btn-cancel {
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add-event {
+    background-color: #08306b;
+    color: white;
+}
+
+    .btn-add-event:hover {
+        background-color: #0a4a94;
+    }
+
+.btn-submit {
+    background-color: #08306b;
+    color: white;
+    border: none;
+}
+
+    .btn-submit:hover {
+        background-color: #0a4a94;
+    }
+
+.btn-cancel {
+    background-color: #f1f1f1;
+    color: #08306b;
+    border: 1px solid #ddd;
+}
+
+    .btn-cancel:hover {
+        background-color: #e9ecef;
+    }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .event-edit-form {
+        padding: 20px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-submit, .btn-cancel {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .event-list-table {
+        font-size: 14px;
+    }
+}

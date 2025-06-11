@@ -1,0 +1,33 @@
+﻿@model Website.Model.Entities.Notification
+
+@{
+    ViewData["Title"] = "Liên Hệ";
+}
+<link rel="stylesheet" href="~/css/contact.css" asp-append-version="true" />
+<div class="contact-container">
+    <div class="contact-box">
+        <div class="contact-title">Liên hệ với chúng tôi</div>
+        <form class="contact-form" method="post">
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Tên bạn</label>
+                    <input type="text" name="name" placeholder="Enter your name" required />
+                </div>
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Enter your email address" required />
+                </div>
+            </div>
+            <div class="input-group full">
+                <label>Lời nhắn</label>
+                <textarea name="message" rows="5" placeholder="Your message here..." required></textarea>
+            </div>
+            <div class="submit-group">
+                <button type="submit" class="submit-btn">Gửi →</button>
+            </div>
+        </form>
+        <div class="contact-note">
+            Mọi thắc mắc xin vui lòng liên hệ tổng đài 24/7 của chúng tôi: <span class="phone">+393 648 109</span>
+        </div>
+    </div>
+</div>

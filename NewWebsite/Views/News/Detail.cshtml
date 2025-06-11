@@ -1,0 +1,56 @@
+﻿@model Website.Model.Entities.News
+
+<head>
+    <link rel="stylesheet" href="~/css/detail.css" asp-append-version="true" />
+</head>
+
+<div class="container">
+    <!-- Tiêu đề và thông tin -->
+    <h1 class="news-title">@Model.Title</h1>
+    <div class="news-meta">
+        Ngày đăng: @(Model.PublishDate?.ToString("dd/MM/yyyy") ?? "Chưa cập nhật")
+    </div>
+
+    <!-- Nội dung -->
+    <div class="news-content">
+        @if (ViewBag.ContentParts != null)
+        {
+            foreach (var part in ViewBag.ContentParts)
+            {
+                <div class="news-part">
+                    @Html.Raw(part) 
+                </div>
+            }
+        }
+    </div>
+
+
+    <!-- Bình luận -->
+    <div class="comment-section">
+        <h4>Bình luận</h4>
+
+        @if (ViewBag.Comments != null && ViewBag.Comments.Count > 0)
+        {
+            foreach (var comment in ViewBag.Comments)
+            {
+                <div class="comment-card">
+                    <p>@comment.Content</p>
+                    <p class="comment-date">Đăng lúc: @(comment.CreatedAt.ToString("dd/MM/yyyy HH:mm"))</p>
+                </div>
+            }
+        }
+        else
+        {
+            <p>Chưa có bình luận nào.</p>
+        }
+
+        <form method="post" action="@Url.Action("AddComment", "News")" class="comment-form">
+            <input type="hidden" name="NewsId" value="@Model.NewsId" />
+            <div class="form-group">
+                <label for="Content">Bình luận của bạn</label>
+                <textarea class="form-control" name="Content" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Gửi</button>
+        </form>
+    </div>
+</div>

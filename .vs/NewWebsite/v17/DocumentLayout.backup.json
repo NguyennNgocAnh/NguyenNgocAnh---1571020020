@@ -1,0 +1,553 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\controllers\\crawlcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\controllers\\crawlcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\controllers\\marketpricescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\controllers\\marketpricescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\controllers\\alertviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\controllers\\alertviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\controllers\\alertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\controllers\\alertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08DD9CB0-B541-42C9-83B1-7679CC9F7253}|Website.Model\\Website.Model.csproj|c:\\users\\admin\\downloads\\newwebsite\\website.model\\entities\\assetmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08DD9CB0-B541-42C9-83B1-7679CC9F7253}|Website.Model\\Website.Model.csproj|solutionrelative:website.model\\entities\\assetmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\controllers\\assetmanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\controllers\\assetmanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\views\\assetmanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\views\\assetmanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\views\\forecast\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\views\\forecast\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\controllers\\forecastservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\controllers\\forecastservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\areas\\administrator\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\areas\\administrator\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\wwwroot\\admin\\assets\\css\\kaiadmin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\wwwroot\\admin\\assets\\css\\kaiadmin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\wwwroot\\css\\alert.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\wwwroot\\css\\alert.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\wwwroot\\css\\asset.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\wwwroot\\css\\asset.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\views\\marketprices\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\views\\marketprices\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\views\\assetmanagement\\pricedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\views\\assetmanagement\\pricedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\models\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\models\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08DD9CB0-B541-42C9-83B1-7679CC9F7253}|Website.Model\\Website.Model.csproj|c:\\users\\admin\\downloads\\newwebsite\\website.model\\entities\\marketprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08DD9CB0-B541-42C9-83B1-7679CC9F7253}|Website.Model\\Website.Model.csproj|solutionrelative:website.model\\entities\\marketprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\views\\alertview\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\views\\alertview\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\views\\alertview\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\views\\alertview\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08DD9CB0-B541-42C9-83B1-7679CC9F7253}|Website.Model\\Website.Model.csproj|c:\\users\\admin\\downloads\\newwebsite\\website.model\\entities\\alert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08DD9CB0-B541-42C9-83B1-7679CC9F7253}|Website.Model\\Website.Model.csproj|solutionrelative:website.model\\entities\\alert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C54E3B95-6E52-419F-B5EC-886743808955}|Website.Repository\\Website.Repository.csproj|c:\\users\\admin\\downloads\\newwebsite\\website.repository\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C54E3B95-6E52-419F-B5EC-886743808955}|Website.Repository\\Website.Repository.csproj|solutionrelative:website.repository\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\models\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\models\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08DD9CB0-B541-42C9-83B1-7679CC9F7253}|Website.Model\\Website.Model.csproj|c:\\users\\admin\\downloads\\newwebsite\\website.model\\entities\\stockcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08DD9CB0-B541-42C9-83B1-7679CC9F7253}|Website.Model\\Website.Model.csproj|solutionrelative:website.model\\entities\\stockcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C54E3B95-6E52-419F-B5EC-886743808955}|Website.Repository\\Website.Repository.csproj|c:\\users\\admin\\downloads\\newwebsite\\website.repository\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C54E3B95-6E52-419F-B5EC-886743808955}|Website.Repository\\Website.Repository.csproj|solutionrelative:website.repository\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\views\\alertview\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\views\\alertview\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\views\\alertview\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\views\\alertview\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C54E3B95-6E52-419F-B5EC-886743808955}|Website.Repository\\Website.Repository.csproj|c:\\users\\admin\\downloads\\newwebsite\\website.repository\\alertrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C54E3B95-6E52-419F-B5EC-886743808955}|Website.Repository\\Website.Repository.csproj|solutionrelative:website.repository\\alertrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|c:\\users\\admin\\downloads\\newwebsite\\newwebsite\\views\\assetmanagement\\_historytable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3ADBD4D3-6D5B-49F5-A534-97EB9EF73E00}|NewWebsite\\NewWebsite.csproj|solutionrelative:newwebsite\\views\\assetmanagement\\_historytable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\Forecast\\Index.cshtml",
+              "RelativeDocumentMoniker": "NewWebsite\\Views\\Forecast\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\Forecast\\Index.cshtml",
+              "RelativeToolTip": "NewWebsite\\Views\\Forecast\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-03T03:35:38.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "NewWebsite\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "NewWebsite\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAcwEgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-03T06:11:34.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AssetManagement.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\Website.Model\\Entities\\AssetManagement.cs",
+              "RelativeDocumentMoniker": "Website.Model\\Entities\\AssetManagement.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\Website.Model\\Entities\\AssetManagement.cs",
+              "RelativeToolTip": "Website.Model\\Entities\\AssetManagement.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T04:19:00.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AlertController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Controllers\\AlertController.cs",
+              "RelativeDocumentMoniker": "NewWebsite\\Controllers\\AlertController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Controllers\\AlertController.cs",
+              "RelativeToolTip": "NewWebsite\\Controllers\\AlertController.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAiwHAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T07:42:13.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AlertViewController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Controllers\\AlertViewController.cs",
+              "RelativeDocumentMoniker": "NewWebsite\\Controllers\\AlertViewController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Controllers\\AlertViewController.cs",
+              "RelativeToolTip": "NewWebsite\\Controllers\\AlertViewController.cs",
+              "ViewState": "AgIAANQAAAAAAAAAAAAiwPAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T07:24:05.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MarketPricesController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Controllers\\MarketPricesController.cs",
+              "RelativeDocumentMoniker": "NewWebsite\\Controllers\\MarketPricesController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Controllers\\MarketPricesController.cs",
+              "RelativeToolTip": "NewWebsite\\Controllers\\MarketPricesController.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAgwAIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T06:06:17.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CrawlController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Controllers\\CrawlController.cs",
+              "RelativeDocumentMoniker": "NewWebsite\\Controllers\\CrawlController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Controllers\\CrawlController.cs",
+              "RelativeToolTip": "NewWebsite\\Controllers\\CrawlController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAABoAAAB6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T07:55:43.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AssetManagementController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Controllers\\AssetManagementController.cs",
+              "RelativeDocumentMoniker": "NewWebsite\\Controllers\\AssetManagementController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Controllers\\AssetManagementController.cs",
+              "RelativeToolTip": "NewWebsite\\Controllers\\AssetManagementController.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAqwFQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T01:53:59.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\AssetManagement\\Index.cshtml",
+              "RelativeDocumentMoniker": "NewWebsite\\Views\\AssetManagement\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\AssetManagement\\Index.cshtml",
+              "RelativeToolTip": "NewWebsite\\Views\\AssetManagement\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMABAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-03T01:25:19.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Areas\\Administrator\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "NewWebsite\\Areas\\Administrator\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Areas\\Administrator\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "NewWebsite\\Areas\\Administrator\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-05T07:52:19.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "kaiadmin.css",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\wwwroot\\admin\\assets\\css\\kaiadmin.css",
+              "RelativeDocumentMoniker": "NewWebsite\\wwwroot\\admin\\assets\\css\\kaiadmin.css",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\wwwroot\\admin\\assets\\css\\kaiadmin.css",
+              "RelativeToolTip": "NewWebsite\\wwwroot\\admin\\assets\\css\\kaiadmin.css",
+              "ViewState": "AgIAAFwBAAAAAAAAAAAUwGoBAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-05T07:53:41.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ForecastService.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Controllers\\ForecastService.cs",
+              "RelativeDocumentMoniker": "NewWebsite\\Controllers\\ForecastService.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Controllers\\ForecastService.cs",
+              "RelativeToolTip": "NewWebsite\\Controllers\\ForecastService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T08:22:00.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\MarketPrices\\Index.cshtml",
+              "RelativeDocumentMoniker": "NewWebsite\\Views\\MarketPrices\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\MarketPrices\\Index.cshtml",
+              "RelativeToolTip": "NewWebsite\\Views\\MarketPrices\\Index.cshtml",
+              "ViewState": "AgIAABABAAAAAAAAAAAkwBsBAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-03T04:52:13.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PriceDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\AssetManagement\\PriceDetails.cshtml",
+              "RelativeDocumentMoniker": "NewWebsite\\Views\\AssetManagement\\PriceDetails.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\AssetManagement\\PriceDetails.cshtml",
+              "RelativeToolTip": "NewWebsite\\Views\\AssetManagement\\PriceDetails.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-03T04:57:37.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "asset.css",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\wwwroot\\css\\asset.css",
+              "RelativeDocumentMoniker": "NewWebsite\\wwwroot\\css\\asset.css",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\wwwroot\\css\\asset.css",
+              "RelativeToolTip": "NewWebsite\\wwwroot\\css\\asset.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-03T03:07:47.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "alert.css",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\wwwroot\\css\\alert.css",
+              "RelativeDocumentMoniker": "NewWebsite\\wwwroot\\css\\alert.css",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\wwwroot\\css\\alert.css",
+              "RelativeToolTip": "NewWebsite\\wwwroot\\css\\alert.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-03T08:28:16.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Models\\EmailService.cs",
+              "RelativeDocumentMoniker": "NewWebsite\\Models\\EmailService.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Models\\EmailService.cs",
+              "RelativeToolTip": "NewWebsite\\Models\\EmailService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T07:07:11.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MarketPrice.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\Website.Model\\Entities\\MarketPrice.cs",
+              "RelativeDocumentMoniker": "Website.Model\\Entities\\MarketPrice.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\Website.Model\\Entities\\MarketPrice.cs",
+              "RelativeToolTip": "Website.Model\\Entities\\MarketPrice.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA5wBMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T09:23:42.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\AlertView\\Index.cshtml",
+              "RelativeDocumentMoniker": "NewWebsite\\Views\\AlertView\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\AlertView\\Index.cshtml",
+              "RelativeToolTip": "NewWebsite\\Views\\AlertView\\Index.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-03T07:40:04.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\AlertView\\Create.cshtml",
+              "RelativeDocumentMoniker": "NewWebsite\\Views\\AlertView\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\AlertView\\Create.cshtml",
+              "RelativeToolTip": "NewWebsite\\Views\\AlertView\\Create.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-03T06:21:31.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Alert.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\Website.Model\\Entities\\Alert.cs",
+              "RelativeDocumentMoniker": "Website.Model\\Entities\\Alert.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\Website.Model\\Entities\\Alert.cs",
+              "RelativeToolTip": "Website.Model\\Entities\\Alert.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA4wBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T06:21:06.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Program.cs",
+              "RelativeDocumentMoniker": "NewWebsite\\Program.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Program.cs",
+              "RelativeToolTip": "NewWebsite\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T03:45:23.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\Website.Repository\\IEmailService.cs",
+              "RelativeDocumentMoniker": "Website.Repository\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\Website.Repository\\IEmailService.cs",
+              "RelativeToolTip": "Website.Repository\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T08:57:14.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EmailSettings.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Models\\EmailSettings.cs",
+              "RelativeDocumentMoniker": "NewWebsite\\Models\\EmailSettings.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Models\\EmailSettings.cs",
+              "RelativeToolTip": "NewWebsite\\Models\\EmailSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T09:40:08.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\appsettings.json",
+              "RelativeDocumentMoniker": "NewWebsite\\appsettings.json",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\appsettings.json",
+              "RelativeToolTip": "NewWebsite\\appsettings.json",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAUwBAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-03T08:56:29.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "StockRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\Website.Repository\\StockRepository.cs",
+              "RelativeDocumentMoniker": "Website.Repository\\StockRepository.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\Website.Repository\\StockRepository.cs",
+              "RelativeToolTip": "Website.Repository\\StockRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:56:11.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "StockContext.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\Website.Model\\Entities\\StockContext.cs",
+              "RelativeDocumentMoniker": "Website.Model\\Entities\\StockContext.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\Website.Model\\Entities\\StockContext.cs",
+              "RelativeToolTip": "Website.Model\\Entities\\StockContext.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T12:56:14.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\AlertView\\Edit.cshtml",
+              "RelativeDocumentMoniker": "NewWebsite\\Views\\AlertView\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\AlertView\\Edit.cshtml",
+              "RelativeToolTip": "NewWebsite\\Views\\AlertView\\Edit.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-03T08:25:44.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\AlertView\\Delete.cshtml",
+              "RelativeDocumentMoniker": "NewWebsite\\Views\\AlertView\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\AlertView\\Delete.cshtml",
+              "RelativeToolTip": "NewWebsite\\Views\\AlertView\\Delete.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-03T08:26:20.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "StockController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Controllers\\StockController.cs",
+              "RelativeDocumentMoniker": "NewWebsite\\Controllers\\StockController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Controllers\\StockController.cs",
+              "RelativeToolTip": "NewWebsite\\Controllers\\StockController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwDAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T07:24:28.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "NewWebsite\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "NewWebsite\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T07:21:56.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AlertRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\Website.Repository\\AlertRepository.cs",
+              "RelativeDocumentMoniker": "Website.Repository\\AlertRepository.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\Website.Repository\\AlertRepository.cs",
+              "RelativeToolTip": "Website.Repository\\AlertRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA7wBoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T06:42:21.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "_HistoryTable.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\AssetManagement\\_HistoryTable.cshtml",
+              "RelativeDocumentMoniker": "NewWebsite\\Views\\AssetManagement\\_HistoryTable.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\NewWebsite\\NewWebsite\\Views\\AssetManagement\\_HistoryTable.cshtml",
+              "RelativeToolTip": "NewWebsite\\Views\\AssetManagement\\_HistoryTable.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-03T02:29:26.592Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+﻿@model List<Website.Model.Entities.News>
+@{
+    ViewBag.Title = "Tin tức";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/news.css" asp-append-version="true" />
+</head>
+
+<!-- Slider toàn trang -->
+<section class="hero-slider">
+    <div class="slider-image" style="">
+        <img src="~/img/slide/slide12.jpg" class="img-fluid rounded">
+        <div class="slider-overlay">
+            <h1 class="slider-title"></h1>
+        </div>
+    </div>
+</section>
+
+<section class="main-news">
+    <div class="container-3col">
+        <!-- Cột trái -->
+        <aside class="left-sidebar">
+            <div class="category-list">
+                <h3>Danh mục</h3>
+                <ul>
+                    <li><a href="#">Chứng khoán</a></li>
+                    <li><a href="#">Bất động sản</a></li>
+                    <li><a href="#">Doanh nghiệp</a></li>
+                    <li><a href="#">Vĩ mô</a></li>
+                </ul>
+            </div>
+            <div class="side-slider">
+                <img src="/img/slide/slide16.jpg" />
+                <img src="/img/slide/slide17.jpg" />
+                <img src="/img/slide/slide18.jpg" />
+            </div>
+        </aside>
+
+        <!-- Cột giữa -->
+        <main class="center-content">
+
+            @if (!Model.Any())
+            {
+                <p>Không tìm thấy tin tức phù hợp.</p>
+            }
+            else
+            {
+                <div class="news-grid">
+                    @foreach (var item in Model)
+                    {
+                        <div class="news-card">
+                            <img src="~/img/news/@item.Image1" alt="Doanh Nghiệp News" class="img-fluid rounded w-100" style="height: 200px; object-fit: cover;">
+                            <div class="news-content">
+                                <h3 class="news-heading">@item.Title</h3>
+                                <p class="news-excerpt">
+                                    @(item.Content.Length > 150 ? item.Content.Substring(0, 150) + "..." : item.Content)
+                                </p>
+                                <div class="news-meta">
+                                    <span class="news-date">
+                                        Ngày đăng: @(item.PublishDate?.ToString("dd/MM/yyyy") ?? "Chưa cập nhật")
+                                    </span>
+                                </div>
+                                <form asp-controller="News" asp-action="Detail" method="get">
+                                    <input type="hidden" name="id" value="@item.NewsId" />
+                                    <div class="mt-2">
+                                        <a class="btn" style="background-color: #08306b; color: white;" asp-controller="News" asp-action="Detail" asp-route-id="@item.NewsId">Xem chi tiết</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </main>
+
+        <!-- Cột phải -->
+        <aside class="right-sidebar">
+            <div class="search-box">
+                <h3>Tìm kiếm tin tức</h3>
+                <form method="get" asp-controller="News" asp-action="Search">
+                    <input type="text" name="keyword" placeholder="Nhập từ khóa..." class="search-input" />
+                    <button type="submit" class="search-btn">Tìm</button>
+                </form>
+            </div>
+
+            <div class="sidebar-banner">
+                <img src="~/img/slide/slide13.jpg" alt="Banner quảng cáo" />
+            </div>
+            <div class="sidebar-banner">
+                <img src="~/img/slide/slide14.jpg" alt="Banner quảng cáo" />
+            </div>
+        </aside>
+    </div>
+</section>
